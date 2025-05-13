@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Default Body Background",
+  "version": "1.0",
+  "description": "Sets the background color of a webpage's body to near-white if it is not already set.",
+  "permissions": ["scripting"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
